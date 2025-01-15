@@ -53,7 +53,7 @@ const Inlove = () => {
             </div>
         ),
         (
-            <div key="slide2" className="flex items-center justify-center laptop:space-x-8 text-gray-50 font-bungee font-bold mobile:flex-col mobile:space-y-5 mobile:mt-5">
+            <div key="slide2" className="flex ipad-v:flex-row ipad-v:justify-center ipad-v:space-x-8 text-gray-50 font-bungee font-bold mobile:flex-col items-center mobile:space-y-5 mobile:mt-5">
                 <div className="flex items-center justify-center bg-violet-500 h-24 w-24 shadow-md rounded">
                     <div className='flex flex-col items-center justify-center space-y-2'>
                         <span className='text-xl'>{elapsedTime.years}</span>
