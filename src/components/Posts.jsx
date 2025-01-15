@@ -41,6 +41,7 @@ const Posts = () => {
         <div className="space-y-6">
             {currentPosts.map((post) => {
                 const user = users[post.user_id]
+                console.log(user.nickname)
                 if (!user) {
                     return (
                         <div key={post.created_at} className="p-4 rounded-lg shadow-lg bg-red-50 border border-red-200 max-w-2xl mx-auto">
@@ -54,7 +55,7 @@ const Posts = () => {
                 return (
                     <div
                         key={post.created_at}
-                        className={`p-6 rounded-xl shadow-xl bg-white border border-gray-200 max-w-2xl mx-auto ${post.status === 'friend' ? 'bg-pink-50' : 'bg-blue-100'}`}
+                        className={`p-6 rounded-xl shadow-xl border border-gray-200 max-w-2xl mx-auto ${user.nickname === 'Mon' ? 'bg-pink-200' : 'bg-blue-200'}`}
                     >
                         <div className="flex items-center space-x-4">
                             <img
@@ -82,7 +83,7 @@ const Posts = () => {
                         <div className="mt-6 flex justify-end">
                             <Button
                                 className="transition-all duration-300 ease-in-out transform hover:scale-105 capitalize"
-                                variant={`${post.status === 'public' ? 'info' : 'warning'}`}
+                                variant={`${post.status === 'public' ? 'primary' : 'success'}`}
                             >
                                 {t(post.status)}
                             </Button>
