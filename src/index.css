@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
+.text-gradient-animation {
+	background: linear-gradient(
+		90deg,
+		#ff007a,
+		#ff5f00,
+		#f3ff00,
+		#00ff95,
+		#007aff
+	);
+	background-size: 300% 300%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: gradientAnimation 3s infinite linear;
+}
+
+@font-face {
+	font-family: 'Zendots';
+	src: url('/src//assets/fonts/ZenDots-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Jersey';
+	src: url('/src/assets/fonts/Jersey10-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Bungee';
+	src: url('/src/assets/fonts/Bungee-Regular.ttf');
+}

@@ -1,0 +1,92 @@
+{
+    "happy_new_year": "Chúc Mừng Năm Mới",
+    "route": {
+        "home": "Trang chủ",
+        "inlove": "Inlove",
+        "countdown": "Đếm ngược",
+        "events": "Sự kiện",
+        "christmas": "Giáng sinh",
+        "lunar": "Tết Nguyên Đán",
+        "settings": "Cài đặt",
+        "gallery": "Thư viện ảnh"
+    },
+    "time": {
+        "days": "Ngày",
+        "weeks": "Tuần",
+        "months": "Tháng",
+        "year": "Năm",
+        "hours": "Giờ",
+        "minutes": "Phút",
+        "seconds": "Giây"
+    },
+    "notifi": "Thông báo",
+    "mode": "Chế độ tối",
+    "lang": "Ngôn ngữ",
+    "dark": {
+        "on": "Bật",
+        "off": "Tắt"
+    },
+    "toast": {
+        "dark": "Đã bật Chế độ tối",
+        "light": "Đã bật chế độ sáng",
+        "lang": "Ngôn ngữ đã được thay đổi thành Tiếng Việt"
+    },
+    "positions": {
+        "top-left": "Trên Trái",
+        "top-right": "Trên Phải",
+        "bottom-right": "Dưới Phải",
+        "bottom-left": "Dưới Trái",
+        "top-center": "Trên Giữa",
+        "bottom-center": "Dưới Giữa"
+    },
+    "fireworks": {
+        "settings": "Cài đặt Pháo Hoa",
+        "shellType": {
+            "header": "Loại vỏ pháo hoa",
+            "body": "Loại pháo hoa sẽ được bắn. Chọn 'Ngẫu nhiên' để có một loại tốt đẹp!"
+        },
+        "shellSize": {
+            "header": "Kích thước vỏ pháo hoa",
+            "body": "Kích thước của pháo hoa. Được mô phỏng theo kích thước vỏ pháo hoa thực, vỏ lớn hơn có các vụ nổ lớn hơn với nhiều sao hơn và đôi khi có nhiều hiệu ứng phức tạp hơn. Tuy nhiên, vỏ lớn hơn cũng đòi hỏi sức mạnh xử lý nhiều hơn và có thể gây ra hiện tượng giật lag."
+        },
+        "quality": {
+            "header": "Chất lượng đồ họa",
+            "body": "Chất lượng đồ họa tổng thể. Nếu hoạt ảnh không chạy mượt mà, hãy thử giảm chất lượng. Chất lượng cao làm tăng đáng kể lượng tia lửa được hiển thị và có thể gây ra độ trễ."
+        },
+        "skyLighting": {
+            "header": "Ánh sáng bầu trời",
+            "body": "Chiếu sáng nền khi pháo hoa nổ. Nếu nền trông quá sáng trên màn hình của bạn, hãy thử đặt nó thành 'Mờ' hoặc 'Không'."
+        },
+        "scaleFactor": {
+            "header": "Tỉ lệ",
+            "body": "Cho phép mở rộng kích thước của tất cả pháo hoa, về cơ bản là đưa bạn đến gần hơn hoặc ra xa hơn. Đối với kích thước vỏ lớn hơn, có thể giảm tỷ lệ một chút, đặc biệt là trên điện thoại hoặc máy tính bảng."
+        },
+        "speed": {
+            "header": "Tốc độ",
+            "body": "Tốc độ di chuyển của pháo hoa. Việc điều chỉnh cài đặt này sẽ kiểm soát tốc độ pháo hoa di chuyển trên bầu trời. Tốc độ cao hơn sẽ khiến chúng đạt đến đỉnh điểm nhanh hơn, trong khi tốc độ thấp hơn sẽ khiến màn hình hiển thị chậm hơn và chậm hơn."
+        },
+        "autoLaunch": {
+            "header": "Tự động",
+            "body": "Tự động bắn chuỗi pháo hoa. Hãy ngồi lại và thưởng thức chương trình hoặc tắt để có toàn quyền kiểm soát."
+        },
+        "finaleMode": {
+            "header": "Chế độ cuối cùng",
+            "body": "Bắn ra những chùm pháo hoa dữ dội. Có thể gây ra độ trễ. Yêu cầu bật 'Tự động bắn'."
+        },
+        "hideControls": {
+            "header": "Ẩn điều khiển",
+            "body": "Ẩn các điều khiển mờ dọc theo đầu màn hình. Hữu ích cho ảnh chụp màn hình hoặc chỉ là trải nghiệm liền mạch hơn. Khi bị ẩn, bạn vẫn có thể nhấn vào góc trên bên phải để mở lại menu này."
+        },
+        "fullscreen": {
+            "header": "Toàn màn hình",
+            "body": "Chuyển đổi chế độ toàn màn hình."
+        },
+        "experimental": {
+            "header": "Thử nghiệm",
+            "body": "Hiệu ứng thử nghiệm giúp duy trì các vệt ánh sáng dài, tương tự như để màn trập máy ảnh mở."
+        }
+    },
+    "snow": {
+        "enabled": "Cho phép"
+    }
+}

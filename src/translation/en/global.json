@@ -1,0 +1,92 @@
+{
+    "happy_new_year": "Happy New Year",
+    "route": {
+        "home": "Home",
+        "inlove": "Inlove",
+        "countdown": "Countdown",
+        "events": "Events",
+        "christmas": "Christmas",
+        "lunar": "Lunar New Year",
+        "settings": "Settings",
+        "gallery": "Gallery"
+    },
+    "time": {
+        "days": "Days",
+        "weeks": "Weeks",
+        "months": "Months",
+        "year": "Year",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds"
+    },
+    "notifi": "Notifications",
+    "mode": "Darkmode",
+    "lang": "Language",
+    "dark": {
+        "on": "On",
+        "off": "Off"
+    },
+    "toast": {
+        "dark": "Enable DarkMode",
+        "light": "Enable LightMode",
+        "lang": "Language has been changed to English"
+    },
+    "positions": {
+        "top-left": "Top Left",
+        "top-right": "Top Right",
+        "bottom-left": "Bottom Right",
+        "bottom-right": "Bottom Left",
+        "top-center": "Top Center",
+        "bottom-center": "Bottom Center"
+    },
+    "fireworks": {
+        "settings": "Firework Settings",
+        "shellType": {
+            "header": "Firework Shell Type",
+            "body": "The type of firework to be launched. Choose 'Random' for a nice variety!"
+        },
+        "shellSize": {
+            "header": "Firework Shell Size",
+            "body": "The size of the firework shell. It mimics the actual size of firework shells; larger shells create bigger explosions with more stars and often more complex effects. However, larger shells also require more processing power and may cause lag."
+        },
+        "quality": {
+            "header": "Graphics Quality",
+            "body": "Overall graphics quality. If animations are not running smoothly, try lowering the quality. High quality significantly increases the number of sparks shown and can cause delay."
+        },
+        "skyLighting": {
+            "header": "Sky Lighting",
+            "body": "Background lighting when the fireworks explode. If the background looks too bright on your screen, try setting it to 'Dim' or 'None'."
+        },
+        "scaleFactor": {
+            "header": "Scale",
+            "body": "Allows scaling of all fireworks, effectively zooming in or out. For larger shell sizes, you may want to reduce the scale slightly, especially on phones or tablets."
+        },
+        "speed": {
+            "header": "Speed",
+            "body": "The speed at which the fireworks move. Adjusting this setting will control how fast the fireworks travel through the sky. A higher speed will make them reach their peak faster, while a lower speed will make the display slower and more gradual."
+        },
+        "autoLaunch": {
+            "header": "Auto Launch",
+            "body": "Automatically launches a firework sequence. Sit back and enjoy the show or turn it off for full control."
+        },
+        "finaleMode": {
+            "header": "Finale Mode",
+            "body": "Launches intense bursts of fireworks. May cause delay. Requires 'Auto Launch' to be enabled."
+        },
+        "hideControls": {
+            "header": "Hide Controls",
+            "body": "Hides the dimmed controls along the top of the screen. Useful for screenshots or a smoother experience. When hidden, you can still tap the top right corner to reopen this menu."
+        },
+        "fullscreen": {
+            "header": "Fullscreen",
+            "body": "Switch to fullscreen mode."
+        },
+        "longExposure": {
+            "header": "Experiment",
+            "body": "An experimental effect that keeps long light trails, similar to leaving the camera shutter open."
+        }
+    },
+    "snow": {
+        "enabled": "Enable"
+    }
+}
