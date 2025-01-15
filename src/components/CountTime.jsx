@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import date from '../api/users.json'
 
 const CountTime = () => {
@@ -35,14 +35,29 @@ const CountTime = () => {
         return () => clearInterval(timer)
     }, [targetDate, navigate])
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-            <div className="p-8 rounded-3xl border-4 border-white bg-white/30 backdrop-blur-md shadow-2xl hover:scale-105 transition-transform duration-500 ease-in-out">
-                <h1 className="text-4xl font-extrabold text-center text-white drop-shadow-lg mb-4">Countdown</h1>
-                <p className="text-3xl font-semibold text-white drop-shadow-lg">
+        <Link
+            to='/newyear'
+            className="flex flex-col items-center justify-center h-[90vh] bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+        >
+            <div className="
+                laptop:rounded-3xl laptop:border-4 laptop:shadow-2xl laptop:p-8
+                ipad-v:rounded-lg ipad-v:border-2 ipad-v:shadow-xl ipad-v:p-5
+                mobile:rounded mobile:shadow-md mobile:p-2
+                border-white bg-white/30 backdrop-blur-md hover:scale-105 
+                transition-transform duration-500 ease-in-out"
+            >
+                <h1 className="laptop:text-4xl mobile:text-2xl font-extrabold text-center text-white drop-shadow-lg mb-4">Countdown</h1>
+                <p className="text-3xl font-semibold text-white drop-shadow-lg hidden laptop:block">
                     {timeLeft.days} {t('time.days')}, {timeLeft.hours} {t('time.hours')}, {timeLeft.minutes} {t('time.minutes')}, {timeLeft.seconds} {t('time.seconds')}
                 </p>
+                <p className="text-xl font-semibold text-white drop-shadow-lg hidden mobile:flex mobile:flex-col mobile:items-center">
+                    <p>{timeLeft.days} {t('time.days')}</p>
+                    <p>{timeLeft.hours} {t('time.hours')}</p>
+                    <p>{timeLeft.minutes} {t('time.minutes')}</p>
+                    <p>{timeLeft.seconds} {t('time.seconds')}</p>
+                </p>
             </div>
-        </div>
+        </Link>
 
     )
 }

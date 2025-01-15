@@ -4,7 +4,7 @@ import targetDate from '../api/users.json'
 const CountDown = () => {
     const Date = targetDate.targetDate
     return (
-        <div>
+        <div className='select-none'>
             <CountTime targetDate={Date} />
         </div>
     )

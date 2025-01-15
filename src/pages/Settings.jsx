@@ -45,7 +45,7 @@ const Settings = () => {
     }
 
     return (
-        <div className="max-w-[1024px] mx-auto py-8">
+        <div className="laptop:max-w-5xl ipad-h:max-w-4xl ipad-v:max-w-2xl mobile:max-w-xs mx-auto py-8">
             <div className="flex flex-col space-y-5">
                 <div className="flex items-center justify-between space-x-2">
                     <BackButton to="/" variant="outline" icon={<FaChevronLeft />} />
@@ -99,7 +99,7 @@ const Settings = () => {
                 {/* Vị trí thông báo */}
                 <div className="p-5 bg-gray-100 dark:bg-gray-800 rounded-md shadow-md">
                     <h2 className="text-xl font-semibold">{t("notifi")}</h2>
-                    <div className="flex gap-4 mt-4">
+                    <div className="flex gap-4 mt-4 ipad-v:flex-row mobile:flex-col ipad-v:items-center mobile:items-start">
                         {Object.keys(positionClasses).map((position) => (
                             <label key={position} className="cursor-pointer">
                                 <input
@@ -118,9 +118,9 @@ const Settings = () => {
 
                 {/* Tuyết */}
                 <div className="p-5 bg-gray-100 dark:bg-gray-800 rounded-md shadow-md">
-                    <h2 className="text-xl font-semibold">{t("snow")}</h2>
+                    <h2 className="text-xl font-semibold">{t("route.snow")}</h2>
                     <label className="flex items-center justify-between hover:bg-gray-200 dark:hover:bg-gray-700 p-4 rounded-md">
-                        <span>{t("snow.enable")}</span>
+                        <span>{t("snow.enabled")}</span>
                         <input
                             type="checkbox"
                             checked={snowEffectEnabled}

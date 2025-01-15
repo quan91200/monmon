@@ -7,7 +7,7 @@ const PillNav = ({ children, icon, to, className, active = '' }) => {
 
     return (
         <span
-            className={`flex items-center space-x-2 transition-all duration-150 hover:bg-gray-300 outline-none focus:outline-none rounded-md ${className} ${isActive ? active : ''
+            className={`flex items-center space-x-2 transition-all duration-150 outline-none focus:outline-none rounded cursor-pointer ${className} ${isActive ? active : ''
                 }`}
         >
             <Link to={to} className="flex items-center space-x-1">

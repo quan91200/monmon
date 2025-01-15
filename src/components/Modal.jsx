@@ -31,7 +31,7 @@ const Modal = ({
             onClick={handleWrapClick}
         >
             <div
-                className="max-w-full max-h-[90vh] overflow-auto rounded-lg shadow-lg m-2 animate-fade-in"
+                className="laptop:max-w-full ipad-h:max-w-3xl mobile:max-w-sm max-h-[90vh] overflow-auto rounded-lg shadow-lg m-2 animate-fade-in"
                 onClick={(e) => e.stopPropagation()}
             >
                 {children}

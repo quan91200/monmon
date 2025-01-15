@@ -38,10 +38,9 @@ const Posts = () => {
         setCurrentPage(pageNumber)
     }
     return (
-        <div className="space-y-6">
+        <div className="space-y-6 mx-auto">
             {currentPosts.map((post) => {
                 const user = users[post.user_id]
-                console.log(user.nickname)
                 if (!user) {
                     return (
                         <div key={post.created_at} className="p-4 rounded-lg shadow-lg bg-red-50 border border-red-200 max-w-2xl mx-auto">
@@ -55,7 +54,7 @@ const Posts = () => {
                 return (
                     <div
                         key={post.created_at}
-                        className={`p-6 rounded-xl shadow-xl border border-gray-200 max-w-2xl mx-auto ${user.nickname === 'Mon' ? 'bg-pink-200' : 'bg-blue-200'}`}
+                        className={`p-6 rounded-md shadow-xl border border-gray-200 laptop:max-w-5xl ipad-h:max-w-4xl ipad-v:max-w-xl mobile:max-w-[320px] mx-auto ${user.nickname === 'Mon' ? 'bg-pink-200' : 'bg-blue-200'}`}
                     >
                         <div className="flex items-center space-x-4">
                             <img
@@ -64,14 +63,14 @@ const Posts = () => {
                                 className="w-14 h-14 rounded-full object-cover ring-2 ring-blue-300"
                             />
                             <div>
-                                <h3 className="font-semibold text-2xl text-gray-800">{user.name} ({user.nickname})</h3>
+                                <h3 className="font-semibold laptop:text-2xl mobile:text-sm text-gray-800">{user.name} ({user.nickname})</h3>
                                 <span className="text-sm text-gray-500">{formattedDate}</span>
                             </div>
                         </div>
-                        <p className="mt-4 text-gray-900 text-lg">{post.content}</p>
+                        <p className="mt-4 text-gray-900 laptop:text-lg mobile:text-sm">{post.content}</p>
 
                         {post.image && (
-                            <div className="mt-6 h-96 w-full">
+                            <div className="mt-6 laptop:h-96 ipad-v:h-80 mobile:h-64 w-full">
                                 <img
                                     src={post.image}
                                     alt="Post visual"
@@ -82,7 +81,7 @@ const Posts = () => {
 
                         <div className="mt-6 flex justify-end">
                             <Button
-                                className="transition-all duration-300 ease-in-out transform hover:scale-105 capitalize"
+                                className="laptop:block mobile:hidden transition-all duration-300 ease-in-out transform hover:scale-105 capitalize"
                                 variant={`${post.status === 'public' ? 'primary' : 'success'}`}
                             >
                                 {t(post.status)}

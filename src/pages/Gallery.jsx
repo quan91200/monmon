@@ -24,7 +24,7 @@ const Gallery = () => {
                     src={tempImgSrc}
                 />
             </Modal>
-            <Container className='max-w-3xl mx-auto py-3 bg-pink-100 px-2'>
+            <Container className='laptop:max-w-5xl ipad-v:max-w-4xl mobile:max-w-3xl mx-auto py-3 bg-gradient-to-b from-red-300 via-orange-200 to-pink-200 px-2'>
                 {posts.map((post, index) => (
                     post.image && (
                         <Pics key={index} onClick={() => getImg(post.image)}>

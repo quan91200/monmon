@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
+import { FaChevronLeft } from "react-icons/fa"
+import { FaChevronRight } from "react-icons/fa"
 
 const SlideShow = ({
     slides = [],
     autoPlay = true, // Bật tắt tự động chuyển slide
     autoPlayInterval = 3000, // Khoảng thời gian tự động chuyển slide
     showDots = true, // Hiển thị các dot
-    showControls = true, // Hiển thị các nút điều hướng trái/phải
+    //showControls = true, // Hiển thị các nút điều hướng trái/phải
     transitionDuration = 500, // Thời gian chuyển đổi slide
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -58,24 +60,22 @@ const SlideShow = ({
                     </div>
                 ))}
             </div>
-            {showControls && (
-                <>
-                    <button
-                        onClick={prevSlide}
-                        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
-                    >
-                        &lt
-                    </button>
-                    <button
-                        onClick={nextSlide}
-                        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
-                    >
-                        &gt
-                    </button>
-                </>
-            )}
+            <>
+                <button
+                    onClick={prevSlide}
+                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black hover:bg-opacity-50 focus:bg-opacity-50 text-white p-2 rounded-full bg-opacity-15 mobile:block ipad-v:hidden"
+                >
+                    <FaChevronLeft size={30} />
+                </button>
+                <button
+                    onClick={nextSlide}
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black hover:bg-opacity-50 focus:bg-opacity-50 text-white p-2 rounded-full bg-opacity-15 mobile:block ipad-v:hidden"
+                >
+                    <FaChevronRight size={30} />
+                </button>
+            </>
             {showDots && (
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 mobile:bottom-0">
                     {slides.map((_, index) => (
                         <button
                             key={index}
@@ -98,7 +98,7 @@ SlideShow.propTypes = {
     slides: PropTypes.node,
     autoPlay: PropTypes.bool,
     autoPlayInterval: PropTypes.number,
-    showControls: PropTypes.bool,
+    // showControls: PropTypes.bool,
     showDots: PropTypes.bool,
     transitionDuration: PropTypes.oneOfType([
         PropTypes.number,

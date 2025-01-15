@@ -31,8 +31,7 @@ const Navbar = () => {
     const handleShowDropdownMobile = () => { setShowNavigationDropdown(prev => !prev) }
     return (
         <div className='fixed top-0 w-full z-40 shadow-md'>
-            <div className={`flex items-center relative justify-between px-6 transition-all duration-300 mmd:py-2 ${isScrolled ? 'py-2 bg-[(255, 255, 255, 0.7)]' : 'py-4 bg-slate-50'}`}>
-                {/*Icon */}
+            <div className={`flex items-center relative justify-between px-6 transition-all duration-300 ipad-v:py-2 bg-transparent ${isScrolled ? 'py-2 laptop:bg-[#ec489980] mobile:bg-[#3b82f666]' : 'py-4 '}`}>
                 <div className='flex items-center gap-1'>
                     <div className={`${isScrolled ? 'h-10 w-full' : 'h-16 w-full'}`}>
                         <img src={Logo} alt='' className='w-full h-full object-cover' />
@@ -41,14 +40,13 @@ const Navbar = () => {
                         MonMon
                     </h2>
                 </div>
-                {/*Laptop - Ipad */}
-                <div className='mmd:flex mmd:items-center mmd:space-x-2 mmd:justify-between hidden'>
+                <div className='ipad-v:flex ipad-v:items-center ipad-v:space-x-2 ipad-v:justify-between hidden'>
                     <div className='flex items-center space-x-2'>
                         <PillNav
                             to='/'
                             icon={<IoHomeOutline className={`${isScrolled ? 'text-sm' : 'text-lg'}`} />}
                             active='text-blue-500 border-b-blue-500 border-b-2'
-                            className={`${isScrolled ? 'px-4 py-2' : 'px-6 py-4'}`}
+                            className={`${isScrolled ? 'p-2' : 'p-4'} hover:bg-blue-300 hover:text-white`}
                         >
                             {t('route.home')}
                         </PillNav>
@@ -56,7 +54,7 @@ const Navbar = () => {
                             to='/gallery'
                             icon={<FaRegImages className={`${isScrolled ? 'text-sm' : 'text-lg'}`} />}
                             active='text-orange-500 border-b-orange-500 border-b-2'
-                            className={`${isScrolled ? 'px-4 py-2' : 'px-6 py-4'}`}
+                            className={`${isScrolled ? 'p-2' : 'p-4'} hover:bg-orange-300 hover:text-white`}
                         >
                             {t('route.gallery')}
                         </PillNav>
@@ -64,7 +62,7 @@ const Navbar = () => {
                             to='/inlove'
                             icon={<LuMessageCircleHeart className={`${isScrolled ? 'text-sm' : 'text-lg'}`} />}
                             active='text-pink-500 border-b-pink-500 border-b-2'
-                            className={`${isScrolled ? 'px-4 py-2' : 'px-6 py-4'}`}
+                            className={`${isScrolled ? 'p-2' : 'p-4'} hover:bg-pink-300 hover:text-white`}
                         >
                             {t('route.inlove')}
                         </PillNav>
@@ -75,7 +73,7 @@ const Navbar = () => {
                                 <PillNav
                                     to="#"
                                     icon={<BsCalendarEvent />}
-                                    className={`${isScrolled ? 'px-4 py-2' : 'px-6 py-4'} sm:px-4 sm:py-2`}
+                                    className={`${isScrolled ? 'p-2' : 'p-4'} sm:p-4 hover:bg-red-300 hover:text-white`}
                                 >
                                     {t('route.events')}
                                 </PillNav>
@@ -89,8 +87,7 @@ const Navbar = () => {
                         </Dropdown>
                     </div>
                 </div>
-                {/* Ipad Mini - Mobile */}
-                <div className='mmd:hidden flex items-center'>
+                <div className='ipad-v:hidden flex items-center'>
                     <button
                         onClick={handleShowDropdownMobile}
                         className='hover:text-blue-500 transition duration-300 hover:scale-95'
@@ -99,20 +96,43 @@ const Navbar = () => {
                     </button>
                 </div>
             </div>
-            <div className={(showNavigationDropdown ? 'block' : 'hidden') + ' md:hidden'}>
-                <div className='space-y-1 py-2 bg-gray-200 flex flex-col'>
-                    <span className='px-3 py-1 hover:text-white hover:bg-blue-500 cursor-pointer'>
-                        <Link to='/'>{t('route.home')}</Link>
-                    </span>
-                    <span className='px-3 py-1 hover:text-white hover:bg-orange-500 cursor-pointer'>
-                        <Link to='/gallery'>{t('route.gallery')}</Link>
-                    </span>
-                    <span className='px-3 py-1 hover:text-white hover:bg-pink-500 cursor-pointer'>
-                        <Link to='/inlove'>{t('route.inlove')}</Link>
-                    </span>
-                    <span className='px-3 py-1 hover:text-white hover:bg-red-500 cursor-pointer'>
-                        <Link to='/newyear'>{t('route.lunar')}</Link>
-                    </span>
+            <div className={(showNavigationDropdown ? 'block' : 'hidden') + ' ipad-v:hidden bg-[#3b82f666]'}>
+                <div className='bg-[(255, 255, 255, .5)] flex flex-col'>
+                    <Link
+                        onClick={handleShowDropdownMobile}
+                        to='/'
+                        className='px-3 py-2 hover:text-white backdrop-blur-0 font-bold hover:bg-blue-500'
+                    >
+                        {t('route.home')}
+                    </Link>
+                    <Link
+                        onClick={handleShowDropdownMobile}
+                        to='/gallery'
+                        className='px-3 py-2 hover:text-white backdrop-blur-0 font-bold hover:bg-orange-500'
+                    >
+                        {t('route.gallery')}
+                    </Link>
+                    <Link
+                        onClick={handleShowDropdownMobile}
+                        to='/inlove'
+                        className='px-3 py-2 hover:text-white backdrop-blur-0 font-bold hover:bg-pink-500'
+                    >
+                        {t('route.inlove')}
+                    </Link>
+                    <Link
+                        onClick={handleShowDropdownMobile}
+                        to='/newyear'
+                        className='px-3 py-2 hover:text-white backdrop-blur-0 font-bold hover:bg-red-500'
+                    >
+                        {t('route.lunar')}
+                    </Link>
+                    <Link
+                        onClick={handleShowDropdownMobile}
+                        to='/settings'
+                        className='px-3 py-2 hover:text-white backdrop-blur-0 font-bold hover:bg-gray-500'
+                    >
+                        {t('route.settings')}
+                    </Link>
                 </div>
             </div>
         </div>

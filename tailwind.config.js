@@ -5,14 +5,29 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin': 'spin 10s linear infinite',
+        'pulse-scale': 'pulseScale 1s infinite',
+      },
+      fontFamily: {
+        zendots: ['Zendots', 'sans-serif'],
+        jersey: ['Jersey', 'sans-serif'],
+        bungee: ['Bungee', 'sans-serif'],
+      },
+      keyframes: {
+        pulseScale: {
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.2)' },
+          '100%': { transform: 'scale(1)' },
+        },
+      },
+    },
     screens: {
-      'sm': '640px',
-      'md': '768px',
-      'mmd': '860px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
+      'laptop': '1280px',
+      'ipad-h': '1024px', // horizontal - ngang
+      'ipad-v': '768px', // vertical - dọc
+      'mobile': '375px'
     }
   },
   plugins: [],
